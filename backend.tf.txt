@@ -1,0 +1,12 @@
+# backend.tf
+
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "myzdmTestRG1"
+    storage_account_name = "myzdmtststoraccnt"
+    container_name       = "myzdmtstcontainer"
+    key                  = "terraform.tfstate"
+    tenant_id            = "8985917c-7c27-4d06-946b-dcaca99ee270"
+    subscription_id      = "071b49cc-308c-44c8-97d9-98a762013202"
+  }
+}
